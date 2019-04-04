@@ -2,8 +2,8 @@ package orian.ioana.lab5.ex1;
 
 public class Rectangle extends Shape {
     
-    private double width;
-    private double length;
+    protected double width;
+    protected double length;
     
     Rectangle(){
         this.width=1;
