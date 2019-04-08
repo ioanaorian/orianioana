@@ -1,11 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package orian.ioana.lab6.ex2;
+package orian.ioana.lab6.ex3;
 
- public class BankAccount {
+/**
+ *
+ * @author Alexandra
+ */
+public class BankAccount implements Comparable<BankAccount> {
         private String owner;
         private double balance;
 
@@ -23,26 +22,25 @@ package orian.ioana.lab6.ex2;
 
         public void withdraw(double amount)
         {
-
             this.balance=this.balance-amount;
         }
 
         public void deposit(double amount)
         {
-
             this.balance+=amount;
         }
         public double getBalance(){
-            return this.balance;
-        }
+             return this.balance;
+         }
         public String getOwner(){
-            return this.owner;
-        }
+             return this.owner;
+         }
 
         @Override
         public boolean equals(Object o)
         {
-            if(o==null|| !(o instanceof BankAccount)) return false;
+            if(o==null|| !(o instanceof BankAccount))
+                return false;
             BankAccount o2=(BankAccount)o;
             return ((o2.owner == owner)&&(o2.balance == balance));
 
@@ -50,9 +48,14 @@ package orian.ioana.lab6.ex2;
         @Override
         public int hashCode()
         {
+
             return owner.hashCode();
         }
-}
 
+       @Override
+       public int compareTo(BankAccount o) {
+        return (int) (this.balance-((BankAccount) o).getBalance());
+       }
+}
 
 

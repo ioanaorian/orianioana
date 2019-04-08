@@ -25,7 +25,7 @@ public class BankAccount {
     @Override
     public int hashCode()
     {
-        return owner.hashCode();
+        return owner.hashCode()+(int)balance;
     }
     
 }
