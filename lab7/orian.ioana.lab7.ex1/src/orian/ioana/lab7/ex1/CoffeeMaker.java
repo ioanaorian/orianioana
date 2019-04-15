@@ -11,15 +11,22 @@ package orian.ioana.lab7.ex1;
  */
 
 public class CoffeeMaker {
-          //static  int contor=0;
-          Coffe makeCoffee() throws Exception {                
-            System.out.println("Make a coffe");
-            int t = (int)(Math.random()*100); 
-            int c = (int)(Math.random()*100);
-            //if(contor>3) throw new Exception("Max number of coffees exceeded!");
-            Coffe cofee = new Coffe(t,c);
-            //contor++; 
-            return cofee;
-      }  
-          
+    
+    int contor=0;
+    
+    Coffee makeCoffee() throws PredefinedNumberException{
+        System.out.println("Make a coffee");
+        int t=(int)(Math.random()*100);
+        int c=(int)(Math.random()*100);
+        contor++;
+        Coffee coffee=new Coffee(t,c);
+        if(contor>3){
+            throw new PredefinedNumberException(contor,"Too much coffee");
+        }
+        return coffee;
+    }
+    int getContor(){
+        return contor;
+    }
+    
 }

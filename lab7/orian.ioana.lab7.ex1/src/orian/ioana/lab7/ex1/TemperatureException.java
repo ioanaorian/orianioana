@@ -9,8 +9,8 @@ package orian.ioana.lab7.ex1;
  *
  * @author Alexandra
  */
-public class TemperatureException extends Exception {
-    int t;
+class TemperatureException extends Exception{
+      int t;
       public TemperatureException(int t,String msg) {
             super(msg);
             this.t = t;
@@ -20,3 +20,5 @@ public class TemperatureException extends Exception {
             return t;
       }
 }
+
+

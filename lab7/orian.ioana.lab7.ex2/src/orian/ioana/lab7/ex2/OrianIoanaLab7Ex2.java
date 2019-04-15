@@ -15,19 +15,17 @@ public class OrianIoanaLab7Ex2 {
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.Exception
      */
-    public static void main(String[] args) {
-       throws IOException{
-        BufferedReader in = newBufferedReade
-        {
-            new FileReader("D:\\FACULTATE_ANUL2\\Semestrul 2\\ISP\\lab7\\orian.ioana.lab7.ex2");
-            String s, s2 = new String();
-            while ((s = in.readLine()) != null) {
-                s2 += s + "\n";
+    public static void main(String[] args) throws Exception {
+        FileReader fr = new FileReader("D:\\FACULTATE_ANUL2\\Semestrul 2\\ISP\\lab7\\orian.ioana.lab7.ex2\\text.txt");
+        int i, count = 0;
+        char c = (char) System.in.read();
+        while ((i = fr.read()) != -1) {
+            if ((char) i == c) {
+                count++;
             }
-            in.close();
         }
+        System.out.println(count);
     }
-    }
-
 }

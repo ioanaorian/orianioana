@@ -10,12 +10,14 @@ package orian.ioana.lab7.ex1;
  * @author Alexandra
  */
 
-public class ConcentrationException extends Exception {
-    int c;
-    public ConcentrationException(int c,String msg) {
+class ConcentrationException extends Exception{
+      int c;
+      public ConcentrationException(int c,String msg) {
             super(msg);
             this.c = c;
-}
-    
-    int getConc(){return c;}
+      }
+ 
+      int getConc(){
+            return c;
+      }
 }

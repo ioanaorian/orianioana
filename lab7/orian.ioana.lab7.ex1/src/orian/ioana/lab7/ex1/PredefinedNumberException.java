@@ -9,17 +9,15 @@ package orian.ioana.lab7.ex1;
  *
  * @author Alexandra
  */
-public class NumberException extends Exception {
+public class PredefinedNumberException extends Exception {
     
-    int number;
-    public NumberException(int number,String msg){
+    int contor;
+    public PredefinedNumberException(int contor,String msg){
         super(msg);
-        this.number=number;
+        this.contor=contor;
     }
-    int getNumber(){
-        return number;
+    int getContor(){
+        return contor;
     }
-    public void setNumer(){
-        this.number++;
-    }
+    
 }
