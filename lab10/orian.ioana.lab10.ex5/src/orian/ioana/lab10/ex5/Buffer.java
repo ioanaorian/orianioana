@@ -27,10 +27,13 @@ class Buffer
        * trezirea unui fir de executie ce a fost blocat prin apelul functiei wait().
        * @param d
        */
-      synchronized void push(double d)
+       void push(double d)
       {
+            
+            synchronized(content){
             content.add(new Double(d));
-            notify();
+            content.notify();
+            }
       }
  
       /**
@@ -42,15 +45,17 @@ class Buffer
        *
        * @return
        */
-      synchronized double get()
+       double get()
       {
             double d=-1;
+            synchronized(content){
             try
             {
-                  while(content.size()==0) wait();
+                  while(content.size()==0) content.wait();
                   d = (((Double)content.get(0))).doubleValue();
                   content.remove(0);
             }catch(Exception e){e.printStackTrace();}
             return d;
+      }
       }
 }
