@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MedicDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="datamedic">
+          <Key>
+            <PropertyRef Name="cnp" />
+          </Key>
+          <Property Name="username" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="cnp" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FisaMedicala">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="pacient_cnp" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="descriere" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="nume_doctor" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="data" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MedicDetail">
+          <Key>
+            <PropertyRef Name="cnp" />
+          </Key>
+          <Property Name="cnp" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="lastname" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="firstname" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="address" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="dateofbirth" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="specializare" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PacientDetail">
+          <Key>
+            <PropertyRef Name="pacient_cnp" />
+          </Key>
+          <Property Name="pacient_cnp" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="lastname" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="firstname" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="dateofbirth" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="address" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pacienti">
+          <Key>
+            <PropertyRef Name="pacient_cnp" />
+          </Key>
+          <Property Name="pacient_cnp" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Programare">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="pacient_cnp" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="p_lastname" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="p_firstname" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="descriere" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="data" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="m_firstname" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="m_lastname" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MedicDBModelStoreContainer">
+          <EntitySet Name="datamedic" EntityType="Self.datamedic" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FisaMedicala" EntityType="Self.FisaMedicala" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MedicDetail" EntityType="Self.MedicDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PacientDetail" EntityType="Self.PacientDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pacienti" EntityType="Self.Pacienti" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Programare" EntityType="Self.Programare" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MedicDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="datamedic">
+          <Key>
+            <PropertyRef Name="cnp" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cnp" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FisaMedicala">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="pacient_cnp" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descriere" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nume_doctor" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MedicDetail">
+          <Key>
+            <PropertyRef Name="cnp" />
+          </Key>
+          <Property Name="cnp" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="firstname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dateofbirth" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="specializare" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PacientDetail">
+          <Key>
+            <PropertyRef Name="pacient_cnp" />
+          </Key>
+          <Property Name="pacient_cnp" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="firstname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dateofbirth" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pacienti">
+          <Key>
+            <PropertyRef Name="pacient_cnp" />
+          </Key>
+          <Property Name="pacient_cnp" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Programare">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="pacient_cnp" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="p_lastname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="p_firstname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="descriere" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="data" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="m_firstname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="m_lastname" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MedicDBEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="datamedics" EntityType="Self.datamedic" />
+          <EntitySet Name="FisaMedicalas" EntityType="Self.FisaMedicala" />
+          <EntitySet Name="MedicDetails" EntityType="Self.MedicDetail" />
+          <EntitySet Name="PacientDetails" EntityType="Self.PacientDetail" />
+          <EntitySet Name="Pacientis" EntityType="Self.Pacienti" />
+          <EntitySet Name="Programares" EntityType="Self.Programare" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MedicDBModelStoreContainer" CdmEntityContainer="MedicDBEntities3">
+          <EntitySetMapping Name="datamedics">
+            <EntityTypeMapping TypeName="MedicDBModel.datamedic">
+              <MappingFragment StoreEntitySet="datamedic">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="cnp" ColumnName="cnp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FisaMedicalas">
+            <EntityTypeMapping TypeName="MedicDBModel.FisaMedicala">
+              <MappingFragment StoreEntitySet="FisaMedicala">
+                <ScalarProperty Name="pacient_cnp" ColumnName="pacient_cnp" />
+                <ScalarProperty Name="descriere" ColumnName="descriere" />
+                <ScalarProperty Name="nume_doctor" ColumnName="nume_doctor" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MedicDetails">
+            <EntityTypeMapping TypeName="MedicDBModel.MedicDetail">
+              <MappingFragment StoreEntitySet="MedicDetail">
+                <ScalarProperty Name="cnp" ColumnName="cnp" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+                <ScalarProperty Name="specializare" ColumnName="specializare" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PacientDetails">
+            <EntityTypeMapping TypeName="MedicDBModel.PacientDetail">
+              <MappingFragment StoreEntitySet="PacientDetail">
+                <ScalarProperty Name="pacient_cnp" ColumnName="pacient_cnp" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+                <ScalarProperty Name="address" ColumnName="address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pacientis">
+            <EntityTypeMapping TypeName="MedicDBModel.Pacienti">
+              <MappingFragment StoreEntitySet="Pacienti">
+                <ScalarProperty Name="pacient_cnp" ColumnName="pacient_cnp" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Programares">
+            <EntityTypeMapping TypeName="MedicDBModel.Programare">
+              <MappingFragment StoreEntitySet="Programare">
+                <ScalarProperty Name="pacient_cnp" ColumnName="pacient_cnp" />
+                <ScalarProperty Name="p_lastname" ColumnName="p_lastname" />
+                <ScalarProperty Name="p_firstname" ColumnName="p_firstname" />
+                <ScalarProperty Name="descriere" ColumnName="descriere" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="m_firstname" ColumnName="m_firstname" />
+                <ScalarProperty Name="m_lastname" ColumnName="m_lastname" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

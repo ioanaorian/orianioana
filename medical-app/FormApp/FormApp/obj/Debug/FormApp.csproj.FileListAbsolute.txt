@@ -1,0 +1,36 @@
+D:\COVID\II\ProjektV2\FormApp\FormApp\bin\Debug\FormApp.exe.config
+D:\COVID\II\ProjektV2\FormApp\FormApp\bin\Debug\FormApp.exe
+D:\COVID\II\ProjektV2\FormApp\FormApp\bin\Debug\FormApp.pdb
+D:\COVID\II\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.csprojAssemblyReference.cache
+D:\COVID\II\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.Form1.resources
+D:\COVID\II\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.Properties.Resources.resources
+D:\COVID\II\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.csproj.GenerateResource.cache
+D:\COVID\II\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.csproj.CoreCompileInputs.cache
+D:\COVID\II\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.exe
+D:\COVID\II\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.pdb
+D:\COVID\II\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.MedicInterface.resources
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\bin\Debug\FormApp.exe.config
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\bin\Debug\FormApp.exe
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\bin\Debug\FormApp.pdb
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.csprojAssemblyReference.cache
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.Form1.resources
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.MedicInterface.resources
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.Properties.Resources.resources
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.csproj.GenerateResource.cache
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.exe
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.pdb
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.Appointments.resources
+C:\Users\Gabriela\Desktop\AN3\SEMESTRUL 2\II\ProjektV2\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.MedicProgram.resources
+F:\VisualStudio\ProjektV2\FormApp\FormApp\bin\Debug\FormApp.exe.config
+F:\VisualStudio\ProjektV2\FormApp\FormApp\bin\Debug\FormApp.exe
+F:\VisualStudio\ProjektV2\FormApp\FormApp\bin\Debug\FormApp.pdb
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.csprojAssemblyReference.cache
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.Appointments.resources
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.Form1.resources
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.MedicInterface.resources
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.MedicProgram.resources
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.Properties.Resources.resources
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.csproj.GenerateResource.cache
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.csproj.CoreCompileInputs.cache
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.exe
+F:\VisualStudio\ProjektV2\FormApp\FormApp\obj\Debug\FormApp.pdb

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MedicDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="datamedic">
+    <Key>
+      <PropertyRef Name="cnp" />
+    </Key>
+    <Property Name="username" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="cnp" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FisaMedicala">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="pacient_cnp" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="descriere" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="nume_doctor" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="data" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedicDetail">
+    <Key>
+      <PropertyRef Name="cnp" />
+    </Key>
+    <Property Name="cnp" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="dateofbirth" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="specializare" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PacientDetail">
+    <Key>
+      <PropertyRef Name="pacient_cnp" />
+    </Key>
+    <Property Name="pacient_cnp" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="dateofbirth" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pacienti">
+    <Key>
+      <PropertyRef Name="pacient_cnp" />
+    </Key>
+    <Property Name="pacient_cnp" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Programare">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="pacient_cnp" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="p_lastname" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="p_firstname" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="descriere" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="data" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="m_firstname" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="m_lastname" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MedicDBModelStoreContainer">
+    <EntitySet Name="datamedic" EntityType="Self.datamedic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FisaMedicala" EntityType="Self.FisaMedicala" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MedicDetail" EntityType="Self.MedicDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PacientDetail" EntityType="Self.PacientDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pacienti" EntityType="Self.Pacienti" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Programare" EntityType="Self.Programare" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

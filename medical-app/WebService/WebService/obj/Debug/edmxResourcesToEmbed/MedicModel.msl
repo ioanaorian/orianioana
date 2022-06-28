@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MedicDBModelStoreContainer" CdmEntityContainer="MedicDBEntities2">
+    <EntitySetMapping Name="datamedics">
+      <EntityTypeMapping TypeName="MedicDBModel.datamedic">
+        <MappingFragment StoreEntitySet="datamedic">
+          <ScalarProperty Name="cnp" ColumnName="cnp" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FisaMedicalas">
+      <EntityTypeMapping TypeName="MedicDBModel.FisaMedicala">
+        <MappingFragment StoreEntitySet="FisaMedicala">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="nume_doctor" ColumnName="nume_doctor" />
+          <ScalarProperty Name="descriere" ColumnName="descriere" />
+          <ScalarProperty Name="pacient_cnp" ColumnName="pacient_cnp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicDetails">
+      <EntityTypeMapping TypeName="MedicDBModel.MedicDetail">
+        <MappingFragment StoreEntitySet="MedicDetail">
+          <ScalarProperty Name="specializare" ColumnName="specializare" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="cnp" ColumnName="cnp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PacientDetails">
+      <EntityTypeMapping TypeName="MedicDBModel.PacientDetail">
+        <MappingFragment StoreEntitySet="PacientDetail">
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="pacient_cnp" ColumnName="pacient_cnp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pacientis">
+      <EntityTypeMapping TypeName="MedicDBModel.Pacienti">
+        <MappingFragment StoreEntitySet="Pacienti">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="pacient_cnp" ColumnName="pacient_cnp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programares">
+      <EntityTypeMapping TypeName="MedicDBModel.Programare">
+        <MappingFragment StoreEntitySet="Programare">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="m_lastname" ColumnName="m_lastname" />
+          <ScalarProperty Name="m_firstname" ColumnName="m_firstname" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="descriere" ColumnName="descriere" />
+          <ScalarProperty Name="p_firstname" ColumnName="p_firstname" />
+          <ScalarProperty Name="p_lastname" ColumnName="p_lastname" />
+          <ScalarProperty Name="pacient_cnp" ColumnName="pacient_cnp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

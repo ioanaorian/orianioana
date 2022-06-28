@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DC3BCF3-E8A3-4FFA-AD5B-1AF701F81FEC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FormApp</RootNamespace>
+    <AssemblyName>FormApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments.Designer.cs">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedicDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedicInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicInterface.Designer.cs">
+      <DependentUpon>MedicInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicProgram.Designer.cs">
+      <DependentUpon>MedicProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Appointments.resx">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicInterface.resx">
+      <DependentUpon>MedicInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicProgram.resx">
+      <DependentUpon>MedicProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.antecedenteMedicaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.changeMedicDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.dataProgramariiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.dateMedicResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.datePacientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.deleteMedicAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.deletePacientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.DoctorsfromSpecializationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.fisaMedicalaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.getMedicDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.getPacientDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.listaPacientiProgramatiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.listPacientiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.listSpecializationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.loginMedicResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.logInPacientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.problemaCurentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.programariResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.registerMedicResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.registerPacientResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\FormApp.ServiceReference2.updatePacientDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference2\WebService1.wsdl" />
+    <None Include="MedicDBDataSet.xsc">
+      <DependentUpon>MedicDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MedicDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicDBDataSet.xss">
+      <DependentUpon>MedicDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MedicDBDataSet1.xsc">
+      <DependentUpon>MedicDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MedicDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedicDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedicDBDataSet1.xss">
+      <DependentUpon>MedicDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\WebService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_61.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20532180.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20532180_2_35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20532180_50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20532180_2_351.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20532180_501.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1rsz_3714091.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_30239367.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_29099903.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24232377.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_24232377.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_242323771.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1242323771.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_242323772.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_2423237711.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_12423237711.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_242323773.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
